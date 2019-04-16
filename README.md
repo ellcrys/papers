@@ -6,6 +6,11 @@
 
 A decentralised source code repository can enable collaborators to build open, transparent, community-led software products and networked organisations without a central authority acting as an enabler or coordinator. Git, a decentralised version control system provides the ability for collaborators to share source codes and assets of software projects in a decentralised way, but the inconvenience and requirement needed to host and maintain an active server makes self-hosted repositories unattractive for most people. We propose a system that store repositories on a blockchain network, one that is highly accessible, censorship-resistant, requires little coordination between collaborators and empowers communities to create, share ownership, contribute and govern open shared software-driven enterprises.
 
+### Table of Content
+
+- [Introduction](#1-introduction)
+- [Open Source, Today](#11-open-source-today)
+
 ## 1. Introduction
 
 Open-source development began as a revolution against the high cost and often sub-par products that closed-source software development companies created. These companies were known to monopolise certain areas in IT, producing software products that had slow-release circles, buggy, less interoperable and expensive. Developers across the world began to collaborate, working asynchronously at times suitable for them to create alternatives that were more user-friendly, highly performant, free to use and has the backing of a huge community — This was a game changer.
@@ -119,10 +124,10 @@ Bitcoin is a form of electronic cash. It is a decentralised digital currency tha
 ### 4.2. Consensus Mechanism
 
 Blockchain networks require a means to reach an agreement on a single value. Consensus algorithms define the rules that must be followed by computers on the network in other to reach an agreement. The process of agreeing with other computers is known as the consensus problem, and it is a well-researched field in computer science.
-Bitcoin uses a consensus algorithm known as Proof of Work[9](PoW). It is used to process blocks of transactions and append them to a chain of blocks — the blockchain. In Bitcoin, the process of appending a block to the blockchain is known as “mining”, and the individuals who take part in the mining process are known as “miners”. PoW requires miners to solve complex cryptographic puzzles to gain the right to add a block.
+Bitcoin uses a consensus algorithm known as Proof of Work [9]. It is used to process blocks of transactions and append them to a chain of blocks — the blockchain. In Bitcoin, the process of appending a block to the blockchain is known as “mining”, and the individuals who take part in the mining process are known as “miners”. PoW requires miners to solve complex cryptographic puzzles to gain the right to add a block.
 
-Miners receive newly created Bitcoin as a reward for solving the puzzle. This reward is known as the block reward. Before the reward is issued, the generated block must follow the consensus rules. All other nodes on the network are responsible for verifying the block and enforcing the consensus rules. Once a miner discovers a valid block they did not create, they immediately stop and start mining the next block. There is a network difficulty that ensures that blocks are created within 10 minutes. It determines how hard it is for the miners to mine a block and is adjusted dynamically to maintain the 10 minutes window.  
- 
+Miners receive newly created Bitcoin as a reward for solving the puzzle. This reward is known as the block reward. Before the reward is issued, the generated block must follow the consensus rules. All other nodes on the network are responsible for verifying the block and enforcing the consensus rules. Once a miner discovers a valid block they did not create, they immediately stop and start mining the next block. There is a network difficulty that ensures that blocks are created within 10 minutes. It determines how hard it is for the miners to mine a block and is adjusted dynamically to maintain the 10 minutes window.
+
 Bitcoin’s PoW has a disadvantage of being very slow. It has been described as a consensus system that wastes energy and is causing harm to the planet. However, it is the most battled tested and well understood trust-less consensus system in the cryptocurrency industry.
 
 ### 4.3. Low Transaction Throughput
@@ -368,7 +373,7 @@ In this section, we discuss issues and approaches relating to how we plan to imp
    In Section 5.5.1, we listed the cheap cost of accessing the git functions of a repository as one of our core design goals. If the cost of contributing to a repository is unreasonably, then the benefits of using a decentralized collaboration framework will be overshadowed by the cost of using it; Which means users interested in starting and participating in networked organizations may do so on centralized frameworks.
    Most blockchains require transactions fees to prevent spamming and other forms of misuse. Without fees, the network will be unusable due to transaction spams. EOS took a different approach to minimize spam by requiring users to stake the native coin to acquire more bandwidth which allows them to freely interact with the platform up to a limit. Unlike fee-based systems, users can send money for free and can choose to recollect their staked coins.
 
-On Ellcrys, there will be two types of repositories; **Staked_ and _Unstaked** repositories.
+On Ellcrys, there will be two types of repositories; **Staked\_ and \_Unstaked** repositories.
 
 **Staked Repository:**
 A staked repository is created when a user deposits a stake to rent a fixed amount of storage space for a repository of their choice. Staked repositories are free to access; A user interacting with a staked repository will not need to pay any fees. There is a risk of staked repositories getting spammed such that their capacity is quickly exhausted. Maintainers of these repositories can choose to enable a **Push Fee** configuration that will require a contributor to pay a fee for every push request. The fee is returned after the branch is merged into a primary branch. Push fees prevent spammers from misusing repository resources and spamming the network. Anyone can add more stake to the repository to increase its allocated resources.
