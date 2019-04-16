@@ -1,4 +1,5 @@
-# Ellcrys Technical Whitepaper
+# Ellcrys Technical White Paper (v1)
+*April 15, 2019*
 
 ## Abstract
 A decentralised source code repository can enable collaborators to build open, transparent, community-led software products and networked organisations without a central authority acting as an enabler or coordinator. Git, a decentralised version control system provides the ability for collaborators to share source codes and assets of software projects in a decentralised way, but the inconvenience and requirement needed to host and maintain an active server makes self-hosted repositories unattractive for most people. We propose a system that store repositories on a blockchain network, one that is highly accessible, censorship-resistant, requires little coordination between collaborators and empowers communities to create, share ownership, contribute and govern open shared software-driven enterprises.
