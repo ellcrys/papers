@@ -164,15 +164,15 @@ We believe a system built on a coin generation model where a single participant 
 
 #### 5.2.1 PeopleMint
 
-##### Introduction
+#### Introduction
 
 We introduced PeopleMint[12] — A novel coin generation model that allows anyone to participate in the creation of a new coin by exchanging their national banknotes for new coins. PeopleMint gives everyone a chance to participate in coin creation using a material (a currency note) that is both valuable and accessible to all class of people. Banknotes or currency notes are the raw material a miner needs to be able to create new coins and receive rewards for their service to the network. Without it, miners are compensated only through transaction fees.
 
-##### Against Miner Centralization & Unfair Distribution
+#### Against Miner Centralization & Unfair Distribution
 
 PeopleMint creates a symbiotic relationship between a global population of users and miners working together to sustain the system while also discouraging miner centralisation by diversifying the participants and processes involved in coin creation. In Bitcoin, PoW mining is the only mechanism through which new coins are introduced. Miners do not need any other party and are incentivised to invest more in superior hardware and infrastructure to outcompete other miners which further makes mining increasingly inaccessible to smaller miners. PeopleMint provides a fair coin generation model as well as a chain security mechanism to keep miners in check through a human-driven process of observing and implicitly voting of blocks on the main chain.
 
-##### How It Works
+#### How It Works
 
 **Create Banknote Transaction**
 
@@ -226,7 +226,7 @@ The initial supply is allocated in the following ratio:
 
 We will distribute the supply allocated to the public through a combination of public sale sessions and a distribution network designed to allow millions the chance to claim a share of the initial supply.
 
-##### Public Sale Sessions
+#### Public Sale Sessions
 
 **Session 1** (Private Sale)
 
@@ -259,7 +259,7 @@ We will distribute the supply allocated to the public through a combination of p
 - Distributed Supply: 862,274,978 ELL
 - Price: Free (optional sale of multipliers)
 
-##### Distribution Network
+#### Distribution Network
 
 **Introduction**
 
@@ -500,7 +500,7 @@ Anytime a group of people comes together to achieve a common goal there is a nee
 
 #### Protocol Governance
 
-##### Introduction
+#### Introduction
 
 Protocol governance refers to the mechanisms by which a blockchain community organizes themselves and make important decisions relating to the protocol. The type of governance structure adopted can have good or bad consequences — There are two major governance structures in blockchain today — On-chain and off-chain governance structure.
 
@@ -516,11 +516,11 @@ Like off-chain governance, on-chain governance decision process begins with a pr
 
 Off-chain governance is notorious for causing rifts within a community which results in delays in development or the creation of forks. The lack of a formal governance process leaves members dissatisfied as there is no measurable way to prove consensus. However, off-chain governance is more inclusive and resistant to manipulations by wealthy individuals or groups.
 
-##### Ellcrys Governance
+#### Ellcrys Governance
 
 Ellcrys will adopt off-chain governance structures where a foundation will act as the official administrator of the project with the responsibility of coordinating the various stakeholders, promoting and building the ecosystem around Ellcrys. A major benefit to derive from this structure is speed. As a project that needs to quickly evolve, there is a need for an entity gauging the community’s preferences, carrying out research, actively contributing to the development and enforcing community decisions.
 
-##### Future Governance Structure
+#### Future Governance Structure
 
 When Ellcrys reaches a stage where the protocol and collaboration features are standardized or frozen. We intend to transition from a foundation-based governance system to a fully community-led governance system. The form this will take will be determined by experiments and the experiences amassed by community-led projects that will be built on Ellcrys.
 
