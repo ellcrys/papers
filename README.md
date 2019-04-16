@@ -174,15 +174,15 @@ PeopleMint creates a symbiotic relationship between a global population of users
 
 ##### How It Works
 
-_Create Banknote Transaction_
+**Create Banknote Transaction**
 
 Alice takes a short video in which she must capture an image of a banknote with the last 12 bytes of the hash of a recent block written on it. She encodes the video in a transaction and sends it to a Node A. Alice’s transaction must include a field called `banknoteHeader` which includes the serial, denomination, and the country code of the banknote.
 
-_Preliminary Validation_
+**Preliminary Validation**
 
 Node A performs preliminary validation to weed out banknotes that have a serial that was previously processed, or notes that have unsupported denomination or currency code. After successful validation, the transaction gets added into the transaction pool. These notes in the pool are not eligible for inclusion in a block until sufficient endorsements from off-chain validators have been collected.
 
-_Off-chain Validation_
+**Off-chain Validation**
 
 Off-chain validation begins when a banknote passes the preliminary check and gets added to the transaction pool. Validators attempt to analyse the banknote to check the correctness of the information provided by the banknote scanner. The validator constructs a new encrypted endorsement transaction named `bnEndorsement` that contains answers to the following protocol questions:
 
@@ -193,19 +193,19 @@ Off-chain validation begins when a banknote passes the preliminary check and get
 
 A validator must construct a banknote endorsement transaction with answers to the above queries and send it to nodes on the network. All nodes collect these endorsements until enough is received from other validators.
 
-_Banknote Endorsement Revelation_
+**Banknote Endorsement Revelation**
 
 A banknote endorsement is encrypted to hide the answers of a validator to prevent other validators from spying and copying. It can only be revealed when a subsequent `bnEndorsementReveal` transaction containing the decryption key is received in the transaction pool. A miner cannot include a banknote in a block without collecting a sufficient number of `bnEndorsementReveal` transactions.
 
-_Banknote Endorsement_
+**Banknote Endorsement**
 
 As soon as a node receives /N/ `bnEndorsement` and /N/ `bnEndorsementReveal`, it checks whether the majority accepts the note. A `bnEndorsed` transaction is created only when an endorsement has been accepted: It must include `bnEndorsement` transaction and the `bnEndorsementReveal` transactions collected. The `bnEndorsed` transaction is added back to the transaction pool and broadcasts to other peers. `bnEndorsed` transactions are eligible for block inclusion. During block validation, nodes verify that the `bnEndorsed` transaction includes a banknote that has been endorsed and accepted. A `bnEndorsed` transaction must include all the information required to validate it.
 
-_Network Exchange Rate_
+**Network Exchange Rate**
 
 When a banknote gets scanned, validated and added to a block, it does not automatically get coins proportional to the unit of the banknote. For example, a \$100 note does not result in the creation of 100 ELL. Instead, there is first a devaluation function applied that reduces the USD value of the banknote by up to 80%. After the devaluation, the final USD value is used to “purchase” ELL from the network at a fixed exchange rate encoded into every node. The devaluation function serves to limit the number of coins created such that many scanners can participate without causing an unchecked increase in coin supply.
 
-_Network Reward Limitation_
+**Network Reward Limitation**
 
 The network reward limit determines the maximum number of coins that can be accumulated by a miner. A miner is allowed to collect as many endorsed banknote transactions necessary to reach the reward limit.
 
@@ -228,7 +228,7 @@ We will distribute the supply allocated to the public through a combination of p
 
 ##### Public Sale Sessions
 
-_Session 1_ (Private Sale)
+**Session 1** (Private Sale)
 
 - Started: 24th of December 2018.
 - Ended: 24th of January 2018.
@@ -236,7 +236,7 @@ _Session 1_ (Private Sale)
 - Distributed Supply: 10,346,202 ELL (includes bonuses)
 - Price: 0.05
 
-_Session 2_ (Pre-Sale)
+**Session 2** (Pre-Sale)
 
 - Started: 1st of February 2018.
 - Ended: 1st of March 2018.
@@ -244,7 +244,7 @@ _Session 2_ (Pre-Sale)
 - Distributed Supply: 7,378,820 ELL (incl. bonuses and bounties)
 - Price: 0.08
 
-_Session 3_ (Pre-Sale 2)
+**Session 3** (Pre-Sale 2)
 
 - Started: TBA
 - Ended: TBA.
@@ -252,7 +252,7 @@ _Session 3_ (Pre-Sale 2)
 - Distributed Supply: 20,000,000 ELL
 - Price: 0.5
 
-_Final Session_ (Distribution Network)
+**Final Session** (Distribution Network)
 
 - Started: TBA.
 - Ended: TBA.
@@ -261,19 +261,19 @@ _Final Session_ (Distribution Network)
 
 ##### Distribution Network
 
-_Introduction_
+**Introduction**
 
 As a hybrid consensus system composed of both proof-of-work and proof-of-stake, there is a need to ensure the fair and widespread distribution of the initial coin supply to as many people as possible. When a few individuals own enough coins to launch an attack, the security of the system is weakened.
 
 The vast majority of ICOs have distributed their initial or total coin supply within a month, leading to a situation where large amounts of coins end up in the control of a few individuals or entities. More so, short-lived ICOs prevent a sufficient amount of people from getting to learn about the project and understanding enough to acquire a stake in the system. For a blockchain network to be sufficiently decentralised, it’s coin supply must also be well distributed.
 
-_The Network_
+**The Network**
 
 To ensure broad and fair distribution of the native coin, we are going to run a temporary network known as the “Distribution Network”. The network is going to serve a singular purpose of allowing anyone in the world to exchange banknotes for the native coin through the PeopleMint mechanism. Once the public allocation is distributed, a snapshot of the blockchain state is collected and used to seed the genesis block of the main network.
 
 The network is to run the full consensus specification which allows anyone to participate (as a miner, endorse, validator and scanner) and earn regular network rewards. We can test the protocol, plan upgrades and onboard more network participants into our community in preparation for our main network launch.
 
-_Multipliers_
+**Multipliers**
 
 Before the distribution network commences, the Ellcrys team would not have sufficient funding to continue to support the project and build a thriving ecosystem. To generate funds, we are going to sell unique signature tokens known as multipliers that are capable of increasing the allocation generated from scanning a banknote. For instance, if a \$100 note produce 2.4 ELL, a 5x multiplier increases the output to 12 ELL. Multipliers are not required to participate in the network — Anyone can still create/earn coins by freely scanning currency notes or participating in other departments of the network.
 
@@ -341,39 +341,39 @@ In this section, we discuss issues and approaches relating to how we plan to imp
 
 #### 5.5.1 Design Goals
 
-1. _No Server Requirement:_ One of the challenges with the git technology is the hosting and maintenance of a server to enable easy transport of contributions between collaborators who may not be within the same network, geography, and timezone. To do this effectively, users need to have some technical experience managing and configuring servers and networks. Additionally, users who are behind firewalls or do not have a public internet address may be unable to host, serve or access repositories. Contributors can choose to collaborate on a single git server administered by an authority which will leave them vulnerable to censorship actions and single point of failure attacks against the authority. Flexibility, availability and convenience are also affected as collaborators will need to be online and on their desk to sync up with others. An ideal system for enabling collaboration between globally distributed collaborators and organizations should not require collaborators to host their owner servers or depend on trusted entities. It should not degrade the convenience offered by centralized code sharing platforms.
+1. **No Server Requirement:** One of the challenges with the git technology is the hosting and maintenance of a server to enable easy transport of contributions between collaborators who may not be within the same network, geography, and timezone. To do this effectively, users need to have some technical experience managing and configuring servers and networks. Additionally, users who are behind firewalls or do not have a public internet address may be unable to host, serve or access repositories. Contributors can choose to collaborate on a single git server administered by an authority which will leave them vulnerable to censorship actions and single point of failure attacks against the authority. Flexibility, availability and convenience are also affected as collaborators will need to be online and on their desk to sync up with others. An ideal system for enabling collaboration between globally distributed collaborators and organizations should not require collaborators to host their owner servers or depend on trusted entities. It should not degrade the convenience offered by centralized code sharing platforms.
 
-2. _Cheap Service:_
+2. **Cheap Service:**
    Centralized code sharing and hosting platforms today allow users to create repositories and contribute to them for free. The ability to offer free services to users is an advantage centralized hosting platforms have over a decentralized counterpart. They are well-funded, profit-driven entities that operate a business-model optimized to encourage free usage until a user reaches a limitation that forces them to begin to pay monthly rent. A decentralized alternative does not have the luxury of investors’ fund paid to all network infrastructure providers as subsidy. Every network participant needs to individually cover their cost of operation from network rewards (e.g. inflation and transaction fees). If usage is made free, the network will be exposed to spamming attacks that can quickly cripple the network, low security and infrastructure failures due to inadequate incentivization. In the end, it is imperative that the network finds a balance between adequately incentivizing network participants and making sure that collaborators access the functionalities of the network cheaply.
 
-3. _Decentralised, But Voluntary Storage:_ A core quality of the blockchain technology is the ability to replicate a piece of data to all nodes on the network — This behaviour allows the network to remain resilient to failures even if a large number of nodes suddenly went offline. However, this resilience comes at a cost of ever-growing storage requirement. The speed at which the network consumes disk space depends on the utility of the network. Bitcoin, a 10-year old financial settlement network and the oldest cryptocurrency has so far used less disk space than the much younger Ethereum which is a general purpose system for developing blockchain applications. For a decentralized git hosting system with smart contract capabilities, the storage complexity becomes compounded. Under the original Nakamoto Consensus, all network participants will be required to run a full node. We believe this is not a feasible approach as growing storage requirement will eventually drive away small network participants. Our goal is to implement a system that is decentralized and does not mandate all nodes to be full nodes, allowing anyone to participate in sustaining the network without worrying about storage.
+3. **Decentralised, But Voluntary Storage:** A core quality of the blockchain technology is the ability to replicate a piece of data to all nodes on the network — This behaviour allows the network to remain resilient to failures even if a large number of nodes suddenly went offline. However, this resilience comes at a cost of ever-growing storage requirement. The speed at which the network consumes disk space depends on the utility of the network. Bitcoin, a 10-year old financial settlement network and the oldest cryptocurrency has so far used less disk space than the much younger Ethereum which is a general purpose system for developing blockchain applications. For a decentralized git hosting system with smart contract capabilities, the storage complexity becomes compounded. Under the original Nakamoto Consensus, all network participants will be required to run a full node. We believe this is not a feasible approach as growing storage requirement will eventually drive away small network participants. Our goal is to implement a system that is decentralized and does not mandate all nodes to be full nodes, allowing anyone to participate in sustaining the network without worrying about storage.
 
-4. _Interoperability:_
+4. **Interoperability:**
    To make the transition from centralized collaboration networks seamless, a decentralized alternative must be interoperable with existing tools and services that users have come to enjoy and rely on. It must also be easy to migrate existing repositories without excessive reconfiguration of third-party services hooked to the repository.
 
 #### 5.5.2 Design Directions
 
-1. _Packaging:_
+1. **Packaging:**
    When a user pushes to a git repository, the client needs to be able to determine the updates (e.g commits) and package it in such a way that it is quickly transported to other nodes on the network, validated, merged or appended into a branch. Our implementation will make use of the git-bundle tool to create bundles of git objects out of repositories, verify and unbundle them.
 
-2. _Service:_
+2. **Service:**
    Any public node on the network must have the capability to act as git server allowing collaborators to fetch and pull git objects to/from repositories without needing to run their own servers. Users only need to use the `git remote` command to point the git client to the remote peer. The nodes on the network are able to bundle, unbundle, verify and perform other operations using git hooks [14]. If collaborator intends to run their personal servers, they can do so by starting the network client, sync up with the network and interact directly with their node.
 
-3. _Storage:_
+3. **Storage:**
    Decentralized storage protocols (e.g. Filecoin) have to enforce on-demand storage providers to comply with protocol rules that have mandated them to store all allocated objects for the duration covered by the fee received. We have opted to make storage voluntary and instead rely on a delegate-based system where a category of network participants provide storage to the rest of the network for a share of the annual coin inflation; This category of participants are known as “Archivers”.  
     An archiver’s sole purpose is to store and maintain all data objects generated from the operations of the network. With the archivers active, miners, endorsers and validators may not need to store the entire state and objects of the network but may do so for latency and computational optimizations.  
     Our storage layer will sit on top of IPFS where any node on the network can query or download any given piece of data at any time.
 
-4. _Cost:_
+4. **Cost:**
    In Section 5.5.1, we listed the cheap cost of accessing the git functions of a repository as one of our core design goals. If the cost of contributing to a repository is unreasonably, then the benefits of using a decentralized collaboration framework will be overshadowed by the cost of using it; Which means users interested in starting and participating in networked organizations may do so on centralized frameworks.
    Most blockchains require transactions fees to prevent spamming and other forms of misuse. Without fees, the network will be unusable due to transaction spams. EOS took a different approach to minimize spam by requiring users to stake the native coin to acquire more bandwidth which allows them to freely interact with the platform up to a limit. Unlike fee-based systems, users can send money for free and can choose to recollect their staked coins.
 
-On Ellcrys, there will be two types of repositories; _Staked_ and _Unstaked_ repositories.
+On Ellcrys, there will be two types of repositories; **Staked_ and _Unstaked** repositories.
 
-_Staked Repository:_
-A staked repository is created when a user deposits a stake to rent a fixed amount of storage space for a repository of their choice. Staked repositories are free to access; A user interacting with a staked repository will not need to pay any fees. There is a risk of staked repositories getting spammed such that their capacity is quickly exhausted. Maintainers of these repositories can choose to enable a _Push Fee_ configuration that will require a contributor to pay a fee for every push request. The fee is returned after the branch is merged into a primary branch. Push fees prevent spammers from misusing repository resources and spamming the network. Anyone can add more stake to the repository to increase its allocated resources.
+**Staked Repository:**
+A staked repository is created when a user deposits a stake to rent a fixed amount of storage space for a repository of their choice. Staked repositories are free to access; A user interacting with a staked repository will not need to pay any fees. There is a risk of staked repositories getting spammed such that their capacity is quickly exhausted. Maintainers of these repositories can choose to enable a **Push Fee** configuration that will require a contributor to pay a fee for every push request. The fee is returned after the branch is merged into a primary branch. Push fees prevent spammers from misusing repository resources and spamming the network. Anyone can add more stake to the repository to increase its allocated resources.
 
-_Unstaked Repository:_
+**Unstaked Repository:**
 An unstaked repositories are the opposite of staked repos. They require all operations to include a fee, which means operations target at them are not free and are priced proportionally to the size of the transaction (transaction data + git objects).
 
 ### 5.6. Storage
@@ -504,11 +504,11 @@ Anytime a group of people comes together to achieve a common goal there is a nee
 
 Protocol governance refers to the mechanisms by which a blockchain community organizes themselves and make important decisions relating to the protocol. The type of governance structure adopted can have good or bad consequences — There are two major governance structures in blockchain today — On-chain and off-chain governance structure.
 
-_On-Chain Governance_
+**On-Chain Governance**
 
 This type of governance scheme involves a formalized decision-making process where a stakeholder creates a proposal that solicits votes from other stakeholders. An administrator must first approve the proposal before it is available to receive votes. A proposal is approved when it receives majority `Yes` votes. Stakeholders are required to stake funds to participate; The votes are coin weighted such that the higher the stake the more powerful a stakeholder’s vote becomes — This has the disadvantages of fostering a system where the wealthy control the faith of the protocol and the less powerful members are ignored. Also, the possibility for stakeholders collusion is present; Large stakeholders can collude around a shared goal or agenda. It is also possible for administrators to censor proposals before they are seen by the larger community. There is also the issue of voter apathy which could expose proposals to easy manipulation due to the lack of interested members.
 
-_Off-Chain Governance_
+**Off-Chain Governance**
 
 In off-chain governance, decision making does not happen in a formal system that is embedded in the codebase of the project. Instead, members of the network coordinate themselves using many channels to share their opinions and learn about the opinions of other members. These channels can be community forums, social media, meetups and other avenues provided by the project administrators.
 
@@ -533,12 +533,12 @@ Ellcrys is determined to create a system that allows networked organizations to 
 1. Bitcoin - https://bitcoin.org/bitcoin.pdf
 2. Git - https://en.wikipedia.org/wiki/Git
 3. Github - https://github.com
-4. Bernstein vs. United States - https://en.wikipedia.org/wiki/Bernstein_v._United_States
+4. Bernstein vs. United States - https://en.wikipedia.org/wiki/Bernstein**v._United**States
 5. Snuffle - https://cr.yp.to/snuffle.html
-6. Censorship of Github - https://en.wikipedia.org/wiki/Censorship_of_GitHub
+6. Censorship of Github - https://en.wikipedia.org/wiki/Censorship**of**GitHub
 7. Blockchain - https://en.wikipedia.org/wiki/Blockchain
 8. Satoshi Nakamoto - https://en.wikipedia.org/wiki/Satoshi_Nakamoto
-9. Proof of Work - https://en.bitcoin.it/wiki/Proof_of_work
+9. Proof of Work - https://en.bitcoin.it/wiki/Proof**of**work
 10. Bitcoin-NG: A Scalable Blockchain Protocol - https://arxiv.org/abs/1510.02037
 11. Proof of Activity: Extending Bitcoin’s Proof of Work via Proof of Stake - https://eprint.iacr.org/2014/452.pdf
 12. PeopleMint: A Multi-Party Mining
