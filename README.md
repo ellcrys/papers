@@ -44,8 +44,7 @@ In this section, we highlight some of the reasons why centralised code hosting p
 However, not many countries have laws that recognise code as free speech. As a result, code sharing platforms are exposed to request and demands from governments to censor projects created by individuals of interests. It is not news that Github continues to face threats and attacks from governments[6] who want repositories removed.  
  While code sharing platforms face a real threat from external and hostile actors, these services themselves can also exert censorship actions upon users and their projects according to predetermined or arbitrary terms which are mostly driven by their business models.
 Additionally, not only are users exposed to censorship behaviours incited by external agents and the code sharing platform, but they are also vulnerable to censorship by project admins or maintainers. Project maintainers are free to cut access to a repository they manage at any time and on their terms.  
- The various levels of censorship threats make centralised code sharing platform unsuitable for hosting communities building innovative, competitive and possibly contentious applications and services. As long as contributions are hosted centrally, repositories continue to remain under threat.  
-
+ The various levels of censorship threats make centralised code sharing platform unsuitable for hosting communities building innovative, competitive and possibly contentious applications and services. As long as contributions are hosted centrally, repositories continue to remain under threat.
 
 ### 2.2.2. Ownership
 
@@ -70,17 +69,27 @@ The ideal collaboration framework for decentralised organisations must take a ve
 ### 2.2.5. Economic Incentives
 
 People do not contribute to open source software irrationally. They do it because there is something to gain. Many people contribute because they want to learn or be members of a community of like-minded individuals. There are those who do it to improve their reputation so that prospective employers may be interested in their abilities. Companies whose business model depends on open source software are also incentivised to contribute to it.
+
 A popular misconception in open source is the idea that open source contributions should attract no financial incentive and remain a free and voluntary activity. However, the truth is, most open source contributions impose time and financial commitments on contributors who need to develop, test, document, evangelise and fix bugs to ensure the product is suitable for both individual developers and enterprises. It is unrealistic to expect contributors to consistently offer their time and money to a project that gets used by others for commercial purposes and to expect no form of financial compensation as incentives to continue to remain committed to the project. If the quality of open source software is to be maintained or improved, the best way to guarantee it is by bringing financial incentives to the table.
+
 Two of the main channels from which open source collaboration may receive financial support are code-sharing platforms or open source foundations. Code sharing platforms can create mechanisms that could potentially allow open source developers to receive financial assistance in the form of donations or subscription to premium branches, but they do not do this. These platforms do a lot to enable collaboration but not enough to allow contributors to receive financial benefits.
+
 Open source foundations such as Apache Software Foundation can receive donations and generate income through sponsorship, merchandise sales, support and hosting conferences but those funds are for the day-to-day running of the foundation of which none of it goes down to non-employee contributors. There needs to be a trusted, transparent and automated mechanism for creating, verifying and transferring value between users and developers of open source software. The introduction of such a mechanism will create many types of open source economies (such as bounty, bug hunting, support services).
+
 In the era of community-led services, collaborators need to be able to generate or receive financial rewards to support continuous development and execution of their services. While centralised code sharing platforms are unsuitable for providing the needed infrastructure, blockchain technology can allow collaborators create shared software products, formulate protocol enforceable governance structure, vote and authorise actions, receive and distribute financial incentives without intermediaries.
 
 ### 2.2.6 Execution Environment
 
-To go beyond projects like libraries, frameworks, CLI tools to community-led services, we need to begin to consider program execution environments that are suitable for running shared applications in the form of dApp, SaaS, API and other types of software. This execution model must lend itself to be deployed, operated and governed according to the governance structure instituted by the community. Collaborators will need an environment to run tests, stage and deploy their applications.
-Most code sharing platforms only provide continuous integration environments with the configuration of this environment still subjected to the authorisation of the single-user account owner. There is a need for a mechanism that allows a community to collectively decide what kind of execution environment and configuration they want for their projects. A deployment environment include a tool that runs an application and makes it accessible to target users. The ideal deployment environment must be unalterable, autonomous and can only allow itself to be upgraded according to the governance rules of the community.
-Historically, consumer applications have been executed in a centralised, managed environment but with the emergence of blockchain platforms like Ethereum, applications can now be executed decentrally on thousands of nodes in a trust-less and autonomous manner. Decentralised applications are immutable; they cannot be altered or destroyed once deployed.  
- While many believe blockchain applications should replace all centralised applications, we believe community-led services can leverage both types of execution environments depending on their goals; This way they are better positioned to compete with centralised services providers on all fronts.
+To go beyond projects like libraries, frameworks, CLI tools to community-led services, we need to begin to consider program execution environments that are suitable for running shared applications in the form of dApp, SaaS, API and other types of software. This execution model must lend itself to be deployed, operated and governed according to the governance structure instituted by the community.
+
+Collaborators will need an environment to run tests, stage and deploy their applications.
+Most code sharing platforms only provide continuous integration environments with the configuration of this environment still subjected to the authorisation of the single-user account owner. There is a need for a mechanism that allows a community to collectively decide what kind of execution environment and configuration they want for their projects.
+
+A deployment environment include a tool that runs an application and makes it accessible to target users. The ideal deployment environment must be unalterable, autonomous and can only allow itself to be upgraded according to the governance rules of the community.
+
+Historically, consumer applications have been executed in a centralised, managed environment but with the emergence of blockchain platforms like Ethereum, applications can now be executed decentrally on thousands of nodes in a trust-less and autonomous manner. Decentralised applications are immutable; they cannot be altered or destroyed once deployed.
+
+While many believe blockchain applications should replace all centralised applications, we believe community-led services can leverage both types of execution environments depending on their goals; This way they are better positioned to compete with centralised services providers on all fronts.
 
 ## 3. The Ideal Platform for Open Source Service
 
@@ -111,8 +120,10 @@ Bitcoin is a form of electronic cash. It is a decentralised digital currency tha
 
 Blockchain networks require a means to reach an agreement on a single value. Consensus algorithms define the rules that must be followed by computers on the network in other to reach an agreement. The process of agreeing with other computers is known as the consensus problem, and it is a well-researched field in computer science.
 Bitcoin uses a consensus algorithm known as Proof of Work[9](PoW). It is used to process blocks of transactions and append them to a chain of blocks — the blockchain. In Bitcoin, the process of appending a block to the blockchain is known as “mining”, and the individuals who take part in the mining process are known as “miners”. PoW requires miners to solve complex cryptographic puzzles to gain the right to add a block.
+
 Miners receive newly created Bitcoin as a reward for solving the puzzle. This reward is known as the block reward. Before the reward is issued, the generated block must follow the consensus rules. All other nodes on the network are responsible for verifying the block and enforcing the consensus rules. Once a miner discovers a valid block they did not create, they immediately stop and start mining the next block. There is a network difficulty that ensures that blocks are created within 10 minutes. It determines how hard it is for the miners to mine a block and is adjusted dynamically to maintain the 10 minutes window.  
- Bitcoin’s PoW has a disadvantage of being very slow. It has been described as a consensus system that wastes energy and is causing harm to the planet. However, it is the most battled tested and well understood trust-less consensus system in the cryptocurrency industry.
+ 
+Bitcoin’s PoW has a disadvantage of being very slow. It has been described as a consensus system that wastes energy and is causing harm to the planet. However, it is the most battled tested and well understood trust-less consensus system in the cryptocurrency industry.
 
 ### 4.3. Low Transaction Throughput
 
@@ -127,6 +138,7 @@ The concern behind “Nothing at Stake” is that since it cost next to nothing 
 #### 4.4.1. Bitcoin-NG
 
 The performance of blockchain protocols is limited by two factors — block size and block interval. Increasing the block size correlates to an increase in transaction throughput. However, bigger blocks take more time to propagate to nodes on the network and can lead to an increase in forks if these blocks arrive late. Decreasing the block size reduces the time it takes for blocks to propagate to nodes, but doing so rapidly leads to forks and frequent reorganisation. The Bitcoin system traded transaction throughput for latency by using a small block of 1MB with a 10 minutes block time: Blocks are sufficiently propagated throughout the network due to the block time, but minimal transactions are processed.
+
 Bitcoin-NG[10] is a scalable blockchain protocol designed to improve the throughput of Bitcoin without affecting the same trust model that exists in Bitcoin. It achieves performance improvement by introducing the concept of a leader election and transaction serialisation. In BitcoinNG, time is divided into periods known as “epoch” where every epoch has a leader. Once a node becomes a leader, it is expected to produce blocks until a new leader is discovered. Leader election is performed randomly in the same way miners in Bitcoin find blocks infrequently.
 BitcoinNG ensures that the system can process transactions even when the network works to find a new leader unlike Nakamoto Consensus in Bitcoin where no transaction is processed during the 10 minutes block interval.
 
@@ -147,6 +159,7 @@ Bitcoin-NG extends Nakamoto consensus into a protocol that is capable of process
 ### 5.2 Coin
 
 In most public blockchain systems with a native cryptocurrency, new coins are generated when a new block is mined. The generated coins are shared to the miner and any other network participants who contributed to the creation or validation of the new block at a predetermined ratio. In Bitcoin and other similar proof-of-work blockchains, the miner of the block receives all newly generated coins.
+
 We believe a system built on a coin generation model where a single participant receives all rewards is unfair and does not promote the equitable distribution of wealth generated by the network. In matured proof-of-work blockchains like Bitcoin, a user must be able to afford specialised equipment to compete with well-funded corporate organisations. The inability for small miners to compete fosters a system that is centralised around a handful of wealthy individuals, pools and mining companies.
 
 #### 5.2.1 PeopleMint
@@ -257,7 +270,7 @@ The vast majority of ICOs have distributed their initial or total coin supply wi
 _The Network_
 
 To ensure broad and fair distribution of the native coin, we are going to run a temporary network known as the “Distribution Network”. The network is going to serve a singular purpose of allowing anyone in the world to exchange banknotes for the native coin through the PeopleMint mechanism. Once the public allocation is distributed, a snapshot of the blockchain state is collected and used to seed the genesis block of the main network.
-  
+
 The network is to run the full consensus specification which allows anyone to participate (as a miner, endorse, validator and scanner) and earn regular network rewards. We can test the protocol, plan upgrades and onboard more network participants into our community in preparation for our main network launch.
 
 _Multipliers_
@@ -370,17 +383,17 @@ An unstaked repositories are the opposite of staked repos. They require all oper
 Today, most blockchain network storage usage and requirements continue to grow rapidly. The nature of the blockchain append-only, backwards-linked data structure causes the overall network state to grow indefinitely. For example, the Ethereum blockchain data size currently stands at 132GB and continues to grow. A troubling consequence of this trend is the potential for more full node operators to shut down their service to the network due to the increasing challenge of maintaining a fully synced node.
 
 For many networks, storage is a problem whose solution is deferred to a future time. The number of available solution is further reduced by the type of ideology these systems are based on. For example, the Bitcoin community believes all nodes must be able to run full-nodes and tends to reject proposals that limit the abilities for all nodes to function equally.
-  
+
 Ellcrys is driven by a desire to collaborate; We are interested in building a sustainable ecosystem of diverse strength and capabilities with every entity working for a common core goal of enabling networked organizations capable of competing with any other structure, as such, we are more open to a system where some participants excel at providing a specific capability to the network.
 
 #### 5.6.2 Delegated Storage Nodes (DSN)
 
 A delegated storage node (also known as an /archiver/) is a node that has been granted the responsibility of storing all data generated by the network from the processing of transactions. As the name suggests, a delegated storage node is selected to perform this service by users through a continuous approval voting process; This is similar to how block producers of the EOS network are elected.
-  
+
 Users of the network vote for their preferred storage delegates by staking some coins and casting a vote referencing the storage nodes of their choice. For a node to be eligible for consideration, it must also stack some coins to join a set of delegates.
-  
+
 There will be a total of 101 delegates of which the top 21 be active delegates while the remaining 80 stay on as standby delegates who will be ready to replace a delegate that has been voted out of the 21 delegate set. Additionally, the standby delegates will continuously run the proof-of-storage algorithm against the active delegates in hopes of constructing a proof that indicts an active delegate of not storing all data objects.
-  
+
 Delegated storage nodes do not participate in the process of creating blocks. Their sole purpose is to maintain a consistent, updated state of the network at all times. They are rewarded via inflation like other network participants.
 
 ### 5.7. Autonomous Functions
@@ -398,7 +411,7 @@ By separating transaction execution from block processing using Hyperledger’s 
 #### 5.7.2 Transaction Fee
 
 The network fee for transactions that invoke autonomous functions must be predictable. Users and developers need to be able to determine how much fees a function requires to be successfully executed. Having this information will enable users and service providers to make informed economic decisions.
-  
+
 In contrast, function invocation on Ethereum and associated fees are not accurately predictable — This leads users to send more than required in the hopes that the necessary fee is deducted and the rest returned. An approach like this has the consequence of forcing users to purchase more coins than needed and possibly denying them of funds that would have been used for other purposes.
 
 We are taking an approach that does not determine fees by the number or type of language operations that is executed within a function call. Instead, a transaction fee will be priced by the size of input and output data size. With this approach, contract developers can predict the cost of functions, network nodes are able to dry-run function calls to return accurate fees and users can call functions with the exact fee needed.
@@ -406,7 +419,7 @@ We are taking an approach that does not determine fees by the number or type of 
 #### 5.7.3 Autonomous Functions In Repository
 
 In Ethereum, there are two types of accounts; Externally owned accounts (EOA) and contract accounts. EOA is an account that is controlled by private keys and has a coin balance. Whereas, contract accounts are accounts that have code associated with them; A transaction initiates the execution of the code. They also hold coin balance controlled by the code.
-  
+
 In Ellcrys, there are balance and repository accounts. Balance account is similar to Ethereum’s externally owned accounts. Repository accounts are git repositories; They include git objects which may represent any binary data. Autonomous function source codes existing in the repository. A repository can have many autonomous functions which are compiled to an executable state ready to be invoked by incoming transactions. Autonomous functions are addressed by their repository ID and the function name.
 
 #### 5.7.4 Fork & Switch
