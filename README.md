@@ -76,7 +76,8 @@ A decentralised source code repository can enable collaborators to build open, t
     - [Coin](#5812-coin)
     - [Middleware](#5813-middleware)
   - [Governance](#59-governance)
-  - [Conclusion](#conclusion)
+  - [Conclusion](#6-conclusion)
+  - [References](#7-references)
 
 ## 1. Introduction
 
@@ -596,7 +597,7 @@ Ellcrys will adopt off-chain governance structures where a foundation will act a
 
 When Ellcrys reaches a stage where the protocol and collaboration features are standardized or frozen. We intend to transition from a foundation-based governance system to a fully community-led governance system. The form this will take will be determined by experiments and the experiences amassed by community-led projects that will be built on Ellcrys.
 
-## Conclusion
+## 6. Conclusion
 
 Ellcrys is determined to create a system that allows networked organizations to be created, managed and flourish without concerns of censorship, ownership, and transparency. The ability for open source communities to build fast and scalable services that can compete with a centrally governed organization will create a world where users concerns and experience matter and where openness and transparency exist naturally. This document will continue to evolve to include new details and dimensions to our core vision.
 
