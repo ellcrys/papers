@@ -4,96 +4,95 @@
 
 ## Abstract
 
-A decentralised source code repository can enable collaborators to build open, transparent, community-led software products and networked organisations without a central authority acting as an enabler or coordinator. Git, a decentralised version control system provides the ability for collaborators to share source codes and assets of software projects in a decentralised way, but the inconvenience and requirement needed to host and maintain an active server makes self-hosted repositories unattractive for most people. We propose a system that store repositories on a blockchain network, one that is highly accessible, censorship-resistant, requires little coordination between collaborators and empowers communities to create, share ownership, contribute and govern open shared software-driven enterprises.
+A decentralised source code repository can enable collaborators to build open, transparent, community-led software products and networked organisations without a central authority acting as an enabler or coordinator. Git, a decentralised version control system provides the ability for collaborators to share source codes and assets of software projects in a decentralised way, but the inconvenience and requirement needed to host and maintain an active server makes self-hosted repositories unattractive to most people. We propose a system that store repositories on a blockchain network, one that is highly accessible, censorship-resistant, requires little coordination between collaborators and empowers communities to create, share ownership, contribute and govern open shared software-driven enterprises.
 
 ### Table of Content
 
 - [Introduction](#1-introduction)
-  - [Open Source, Today](#11-open-source-today)
-  - [Open Source, Tomorrow](#12-open-source-tomorrow)
+- [Open Source, Today](#11-open-source-today)
+- [Open Source, Tomorrow](#12-open-source-tomorrow)
 - [Obstacles Of Open Source Services](#2-obstacles-of-open-source-services)
-  - [Collaboration Tools & Platforms](#21-collaboration-tools--platforms)
-  - [Shortcomings of Centralized Code Sharing Platforms](#22-shortcomings-of-centralized-code-sharing-platforms)
-    - [Censorship](#221-censorship)
-    - [Ownership](#222-ownership)
-    - [Immutability](#223-immutability)
-    - [Governance](#224-governance)
-    - [Economic Incentives](#225-economic-incentives)
-    - [Execution Environment](#226-execution-environment)
+- [Collaboration Tools & Platforms](#21-collaboration-tools--platforms)
+- [Shortcomings of Centralized Code Sharing Platforms](#22-shortcomings-of-centralized-code-sharing-platforms)
+  - [Censorship](#221-censorship)
+  - [Ownership](#222-ownership)
+  - [Immutability](#223-immutability)
+  - [Governance](#224-governance)
+  - [Economic Incentives](#225-economic-incentives)
+  - [Execution Environment](#226-execution-environment)
 - [The Ideal Platform for Open Source Service](#3-the-ideal-platform-for-open-source-service)
 - [Bitcoin](#4-bitcoin)
-  - [Introduction](#41-introduction)
-  - [Consensus Mechanism](#42-consensus-mechanism)
-  - [Low Transaction Throughput](#43-low-transaction-throughput)
-  - [Alternative Consensus Mechanisms](#44-alternative-consensus-mechanisms)
-  - [Alternative Consensus Mechanisms](#44-alternative-consensus-mechanisms)
-    - [Bitcoin-NG](#441-bitcoin-ng)
+- [Introduction](#41-introduction)
+- [Consensus Mechanism](#42-consensus-mechanism)
+- [Low Transaction Throughput](#43-low-transaction-throughput)
+- [Alternative Consensus Mechanisms](#44-alternative-consensus-mechanisms)
+- [Alternative Consensus Mechanisms](#44-alternative-consensus-mechanisms)
+  - [Bitcoin-NG](#441-bitcoin-ng)
 - [Ellcrys Protocol](#5-ellcrys-protocol)
-  - [Consensus Model](#51-consensus-model)
-    - [Hybrid Protocol](#511-hybrid-protocol)
-    - [Bitcoin-NG — Leader-based Block Creation](#512-bitcoin-ng--leader-based-block-creation)
-  - [Coin](#52-coin)
-    - [PeopleMint](#521-peoplemint)
-    - [Coin Basics & Supply](#522-coin-basics--supply)
-    - [Initial Supply Allocation](#523-initial-supply-allocation)
-    - [Public Distribution Method](#524-public-distribution-method)
-    - [Distribution Network](#525-distribution-network)
-  - [Network Participants](#53-network-participants)
-    - [Miners](#531-miners)
-    - [Witness](#532-witness)
-    - [Transaction Endorser](#533-transaction-endorser)
-    - [Banknote Scanners](#534-banknote-scanners-scanners)
-    - [Banknote Validators](#535-banknote-validators-bettors)
-  - [Block Creation](#54-block-creation)
-    - [Key Blocks](#541-key-blocks)
-    - [Microblocks](#542-microblocks)
-    - [Block Validation](#543-block-validation)
-  - [Git Hosting System](#55-git-hosting-system)
-    - [Design Goals](#551-design-goals)
-    - [Design Directions](#552-design-directions)
-    - [Design Directions](#552-design-directions)
-  - [Storage](#56-storage)
-    - [Storage Problem)](#561-storage-problem)
-    - [Delegated Storage Nodes (DSN)](#562-delegated-storage-nodes-dsn)
-  - [Autonomous Functions](#57-autonomous-functions)
-    - [Multi-language](#572-multi-language)
-    - [Transaction Fee](#572-transaction-fee)
-    - [Autonomous Functions In Repository](#573-autonomous-functions-in-repository)
-    - [Fork & Switch](#574-fork--switch)
-    - [Optional Immutability](#575-optional-immutability)
-  - [Collaboration Primitives](#58-collaboration-primitives)
-    - [Repository](#581-repository)
-    - [Membership](#582-membership)
-    - [Role](#583-role)
-    - [Permission](#584-permission)
-    - [Department](#585-department-dep)
-    - [Reputation](#586-reputation)
-    - [Skill](#587-skill)
-    - [Task](#588-task)
-    - [Proposals & Voting](#589-proposals--voting)
-    - [Dispute Resolution](#5810-dispute-resolution)
-    - [Stake](#5811-stake)
-    - [Coin](#5812-coin)
-    - [Middleware](#5813-middleware)
-  - [Governance](#59-governance)
-  - [Conclusion](#6-conclusion)
-  - [References](#7-references)
+- [Consensus Model](#51-consensus-model)
+  - [Hybrid Protocol](#511-hybrid-protocol)
+  - [Bitcoin-NG — Leader-based Block Creation](#512-bitcoin-ng--leader-based-block-creation)
+- [Coin](#52-coin)
+  - [PeopleMint](#521-peoplemint)
+  - [Coin Basics & Supply](#522-coin-basics--supply)
+  - [Initial Supply Allocation](#523-initial-supply-allocation)
+  - [Public Distribution Method](#524-public-distribution-method)
+  - [Distribution Network](#525-distribution-network)
+- [Network Participants](#53-network-participants)
+  - [Miners](#531-miners)
+  - [Witness](#532-witness)
+  - [Transaction Endorser](#533-transaction-endorser)
+  - [Banknote Scanners](#534-banknote-scanners-scanners)
+  - [Banknote Validators](#535-banknote-validators-bettors)
+- [Block Creation](#54-block-creation)
+  - [Key Blocks](#541-key-blocks)
+  - [Microblocks](#542-microblocks)
+  - [Block Validation](#543-block-validation)
+- [Git Hosting System](#55-git-hosting-system)
+  - [Design Goals](#551-design-goals)
+  - [Design Directions](#552-design-directions)
+  - [Design Directions](#552-design-directions)
+- [Storage](#56-storage)
+  - [Storage Problem)](#561-storage-problem)
+  - [Delegated Storage Nodes (DSN)](#562-delegated-storage-nodes-dsn)
+- [Autonomous Functions](#57-autonomous-functions)
+  - [Multi-language](#572-multi-language)
+  - [Transaction Fee](#572-transaction-fee)
+  - [Autonomous Functions In Repository](#573-autonomous-functions-in-repository)
+  - [Fork & Switch](#574-fork--switch)
+  - [Optional Immutability](#575-optional-immutability)
+- [Collaboration Primitives](#58-collaboration-primitives)
+  - [Repository](#581-repository)
+  - [Membership](#582-membership)
+  - [Role](#583-role)
+  - [Permission](#584-permission)
+  - [Department](#585-department-dep)
+  - [Reputation](#586-reputation)
+  - [Skill](#587-skill)
+  - [Task](#588-task)
+  - [Proposals & Voting](#589-proposals--voting)
+  - [Dispute Resolution](#5810-dispute-resolution)
+  - [Stake](#5811-stake)
+  - [Coin](#5812-coin)
+  - [Middleware](#5813-middleware)
+- [Conclusion](#6-conclusion)
+- [References](#7-references)
 
 ## 1. Introduction
 
-Open-source development began as a revolution against the high cost and often sub-par products that closed-source software development companies created. These companies were known to monopolise certain areas in IT, producing software products that had slow-release circles, buggy, less interoperable and expensive. Developers across the world began to collaborate, working asynchronously at times suitable for them to create alternatives that were more user-friendly, highly performant, free to use and has the backing of a huge community — This was a game changer.
+Open-source development began as a revolution against the high cost and often sub-par products that closed-source software development companies created.These companies were known to monopolise certain areas in IT. They were shipping software products that were buggy, less interoperable, expensive and had slow-release cycles.. Developers across the world began to collaborate, working asynchronously at times suitable for them to create alternatives that were more user-friendly, highly performant, free to use and has the backing of a huge community — This was a game changer.
 
 ## 1.1 Open Source, Today
 
-Today, open source software products run the world — Everyone relies on open source software products directly or indirectly, and the movement has forced once closed-source companies who were anti-open-source to begin to release open-source projects as well as contribute to existing open projects.
-However, companies are increasingly becoming irresponsible with the way they manage users’ data and experiences, we believe it is time for open source to move towards a new phase where open source communities provide competing and innovative services that are open, transparent and driven by a user-first philosophy.
+Today, open source software products run the world — Everyone relies on open source software products directly or indirectly, and the movement has forced the once closed-source companies who were anti-open-source to begin to release open-source projects as well as contribute to existing open projects.
+However, companies are increasingly becoming irresponsible with the way they manage users’ data and experiences. We believe it’s time for open source to move towards a new phase where its communities provide competing and innovative services that are open, transparent and driven by a user-first philosophy.
 Right now, open source communities mostly rally to build static products that form part of a more significant product or service offered by closed-source, equity-driven companies who rarely contribute back to the community or have questionable ethics. These open communities have little power to effect changes on the misbehaving companies that use their product. Unethical practises by companies, regulators and government motivated the creation and sustainability of Bitcoin[1] — A peer-to-peer electronic cash system that allows people to send, receive and control their money without any intermediary. Bitcoin is an example of a service designed to be open, transparent, pro-users and governed by a community of people spread around the planet.
 
 ## 1.2 Open Source, Tomorrow
 
-The shift towards community-driven services spearheaded by open source communities is already happening in the cryptocurrency industry which is worth over \$176 billion as at the time of this writing and it is the most prominent pioneer in the creation, incentivization and governance of systems that are created in the open with publicly disclosed mission and ethical standards. Projects like Bitcoin and Ethereum have a large community of participants who regularly hold administrators and core developers accountable to the standards they have publicly championed.
+The shift towards community-driven services spearheaded by open source communities is already happening in the cryptocurrency industry which is worth over \$176 billion as at the time of writing this whitepaper, and it is the most prominent pioneer in the creation, incentivization and governance of systems that are created in the open with publicly disclosed mission and ethical standards. Projects like Bitcoin and Ethereum have a large community of participants who regularly hold administrators and core developers accountable to the standards they have publicly championed.
 If we intend to derive benefits from open source services quickly, then the tools and ideologies that make these communities successful must be adapted for communities building centralised applications which are undoubtedly the most accessible, convenient and faster than their decentralised versions.
-By adopting the open and collaborative structure of open source to centralised systems, making their development, governance and executions more transparent and accountable, we make it easy for communities composed of mutually distrusting collaborators to build all kinds of applications (desktop, mobile, VR) apps together and integrate any business model like centrally-run organisations.
+By adopting the open and collaborative structure of open source to centralised systems, making their development, governance and executions more transparent and accountable, we make it easy for communities composed of mostly mutually distrustful collaborators to build all kinds of applications (desktop, mobile, VR) together and integrate any business model like centrally-run organisations.
 However, for us to realise a future where open source services compete with centrally-led services, we need to find and fix the challenges and obstacles that may produce failures.
 
 # 2. Obstacles Of Open Source Services
@@ -103,9 +102,9 @@ A host of infrastructural inadequacies challenge the dream of community-led open
 ## 2.1 Collaboration Tools & Platforms
 
 Open source developers are distributed across the world. They speak different languages, have different beliefs and live in different timezones, but these differences have not slowed down the progress of the OSS community. Most developers contributing to open source projects today use a distributed version control system (DVCS). These tools provide a common development protocol that collaborators use to contribute and manage a codebase.
-Most developers make use of the Git[2] to share, track, package and version their contributions. Git is a distributed version control system developed in 2015 by Linus Torvalds to aid the development of the Linux kernel. It has since grown to be one of the most important tools utilised by developers and enterprises across the world. Git allows developers to work in a decentralised approach where they manage replicated source code repositories, contribute and resync with other developers.
-Unfortunately, running and maintaining independent git servers is challenging for most users — Requires understanding of some networking, good internet, high-availability, server cost if hosted on the cloud. For this reason, cloud-based code hosting services like Github[3] emerged to provide users with a service that hosts repositories, thereby eliminating the need for users to run and maintain personal servers. These services also provide additional collaboration utilities like issue tracking, reviews, pull request that allows users to communicate problems and manage new releases of their software.
-Millions of developers use Github and other code sharing platforms to build great software, but the central ownership, governance tools optimised for authoritarianism and execution of the service make it unfit to host teams building open source services.
+Most developers make use of the Git[2] to share, track, package and version their contributions. Git is a distributed version control system developed in April 2005 by Linus Torvalds to aid the development of the Linux kernel. It has since grown to be one of the most important tools utilised by developers and enterprises across the world. Git allow developers to work in a decentralised approach where they manage replicated source code repositories, contribute and resync with other developers.
+Unfortunately, running and maintaining independent git servers is challenging for most users — Requires understanding of some networking, good internet, high-availability, server cost if hosted on the cloud. For this reason, cloud-based code hosting services like Github[3] emerged to provide users with a service that host repositories, thereby eliminating the need for users to run and maintain personal servers. These services also provide additional collaboration utilities like issue tracking, reviews, pull request that enable users to communicate problems and manage new releases of their software.
+Millions of developers use Github and other code sharing platforms to build great software, but the central ownership, governance tools optimised for authoritarianism and execution of the service make it unfit to host community-owned open source services.
 
 ## 2.2. Shortcomings of Centralized Code Sharing Platforms
 
@@ -117,7 +116,7 @@ In this section, we highlight some of the reasons why centralised code hosting p
 However, not many countries have laws that recognise code as free speech. As a result, code sharing platforms are exposed to request and demands from governments to censor projects created by individuals of interests. It is not news that Github continues to face threats and attacks from governments[6] who want repositories removed.  
  While code sharing platforms face a real threat from external and hostile actors, these services themselves can also exert censorship actions upon users and their projects according to predetermined or arbitrary terms which are mostly driven by their business models.
 Additionally, not only are users exposed to censorship behaviours incited by external agents and the code sharing platform, but they are also vulnerable to censorship by project admins or maintainers. Project maintainers are free to cut access to a repository they manage at any time and on their terms.  
- The various levels of censorship threats make centralised code sharing platform unsuitable for hosting communities building innovative, competitive and possibly contentious applications and services. As long as contributions are hosted centrally, repositories continue to remain under threat.
+ The various levels of censorship threats make centralised code sharing platform unsuitable for hosting communities building innovative, competitive and possibly contentious applications and services. As long as contributions are hosted centrally, repositories continue to remain under potential threat.
 
 ### 2.2.2. Ownership
 
@@ -129,13 +128,13 @@ In the crypto industry, they say “If you do not own your private keys, you do 
 ### 2.2.3. Immutability
 
 The concept of immutability in computing refers to the unchanging, unalterable state of data. It refers to the inability of a piece of data to be altered. Immutable data is easy to reason about; We can make assumptions and build on top of them with certainty that their state will not change unexpectedly.
-Interestingly, the Git version control system used by millions of collaborators and supported by most code sharing platforms utilises an immutable data structure. Git includes concepts like branches and commits; Commits are backwards linked collections of changes that exist inside a branch. Collaborators can begin working from any commit and never have to worry that future commits may alter the state of the commits they are extending.
+Interestingly, the Git version control system used by millions of collaborators and supported by most code sharing platforms utilises an immutable data structure. Git includes concepts like branches and commits; Commits are backwards-linked collections of changes that exist inside a branch. Collaborators can begin working from any commit and never have to worry that future commits may alter the state of the commits they are extending.
 However, code sharing platforms do not guarantee immutability of an entire repository. Repositories as a whole are not immutable; Their owners or the platform operators can delete them. It is important to note that the ability to delete repository can serve as a tool for censorship. An account owner or platform operator can prevent people from collaborating by removing a repository from existence. Although repositories can be cloned easily, it is more challenging to re-organise a community disrupted by an act of censorship.
 The lack of guaranteed immutability on code sharing websites makes them unappealing for hosting community-led services. It will be devastating for a community to one day find their shared enterprise deleted by the account owner or platform operator.
 
 ### 2.2.4. Governance
 
-For open source communities to succeed in creating and managing decentralised organisations, they must first figure out governance, otherwise what would be obtainable is chaos, uncertainty, indecision and unaccountability. These communities need to be able to formulate a governance system that is acceptable to all parties and enables them to make decisions quickly and fairly.
+For open source communities to succeed in creating and managing decentralised organisations, they must first figure out governance, otherwise what would be obtainable is chaos, uncertainty, indecision, and unaccountability. These communities need to be able to formulate a governance system that is acceptable to all parties and enables them to make decisions quickly and fairly.
 On centralised code sharing platforms, there is only one kind of governance system — One where the account owner dictates how and when collaborators interact with and contribute to the project. As a remedy, big projects delegate control to reputable, structured open-source organisations like Apache Software Foundation or the Linux Foundation.
 The ideal collaboration framework for decentralised organisations must take a vendor-neutral stance, only providing primitives and templates that can be used or adapted to create simple to complex governance models with enforcement carried out by the protocol where possible.
 
@@ -143,11 +142,11 @@ The ideal collaboration framework for decentralised organisations must take a ve
 
 People do not contribute to open source software irrationally. They do it because there is something to gain. Many people contribute because they want to learn or be members of a community of like-minded individuals. There are those who do it to improve their reputation so that prospective employers may be interested in their abilities. Companies whose business model depends on open source software are also incentivised to contribute to it.
 
-A popular misconception in open source is the idea that open source contributions should attract no financial incentive and remain a free and voluntary activity. However, the truth is, most open source contributions impose time and financial commitments on contributors who need to develop, test, document, evangelise and fix bugs to ensure the product is suitable for both individual developers and enterprises. It is unrealistic to expect contributors to consistently offer their time and money to a project that gets used by others for commercial purposes and to expect no form of financial compensation as incentives to continue to remain committed to the project. If the quality of open source software is to be maintained or improved, the best way to guarantee it is by bringing financial incentives to the table.
+A popular misconception about open source is the idea that open source contributions should attract no financial incentive and remain a free and voluntary activity. However, the truth is, most open source contributions impose time and financial commitments on contributors who need to develop, test, document, evangelise the product and fix bugs to ensure the product is suitable for both individual developers and enterprises. It is unrealistic to expect contributors to consistently offer their time and money to a project that gets used by others for commercial purposes and to expect no form of financial compensation as incentives to continue to remain committed to the long term improvement and sustenance of the project. If the quality of open source software is to be maintained or improved, the best way to guarantee it is by bringing financial incentives to the table.
 
 Two of the main channels from which open source collaboration may receive financial support are code-sharing platforms or open source foundations. Code sharing platforms can create mechanisms that could potentially allow open source developers to receive financial assistance in the form of donations or subscription to premium branches, but they do not do this. These platforms do a lot to enable collaboration but not enough to allow contributors to receive financial benefits.
 
-Open source foundations such as Apache Software Foundation can receive donations and generate income through sponsorship, merchandise sales, support and hosting conferences but those funds are for the day-to-day running of the foundation of which none of it goes down to non-employee contributors. There needs to be a trusted, transparent and automated mechanism for creating, verifying and transferring value between users and developers of open source software. The introduction of such a mechanism will create many types of open source economies (such as bounty, bug hunting, support services).
+Open source foundations such as Apache Software Foundation can receive donations and generate income through sponsorship, merchandise sales, support and hosting conferences but those funds are for the day-to-day running of the foundation of which none of it goes down to non-employee contributors. There needs to be a trusted, transparent and automated mechanism for creating, verifying and transferring value between users and collaborators of open source software. The introduction of such a mechanism will create many types of open source economies (such as bounty, bug hunting, support services).
 
 In the era of community-led services, collaborators need to be able to generate or receive financial rewards to support continuous development and execution of their services. While centralised code sharing platforms are unsuitable for providing the needed infrastructure, blockchain technology can allow collaborators create shared software products, formulate protocol enforceable governance structure, vote and authorise actions, receive and distribute financial incentives without intermediaries.
 
@@ -158,28 +157,33 @@ To go beyond projects like libraries, frameworks, CLI tools to community-led ser
 Collaborators will need an environment to run tests, stage and deploy their applications.
 Most code sharing platforms only provide continuous integration environments with the configuration of this environment still subjected to the authorisation of the single-user account owner. There is a need for a mechanism that allows a community to collectively decide what kind of execution environment and configuration they want for their projects.
 
-A deployment environment include a tool that runs an application and makes it accessible to target users. The ideal deployment environment must be unalterable, autonomous and can only allow itself to be upgraded according to the governance rules of the community.
+A deployment environment includes a tool that runs an application and makes it accessible to target users. The ideal deployment environment must be unalterable, autonomous and can only allow itself to be upgraded according to the governance rules of the community.
 
 Historically, consumer applications have been executed in a centralised, managed environment but with the emergence of blockchain platforms like Ethereum, applications can now be executed decentrally on thousands of nodes in a trust-less and autonomous manner. Decentralised applications are immutable; they cannot be altered or destroyed once deployed.
 
 While many believe blockchain applications should replace all centralised applications, we believe community-led services can leverage both types of execution environments depending on their goals; This way they are better positioned to compete with centralised services providers on all fronts.
 
+Collaborators may decide to build completely decentralized application that cannot be altered once deployed if the nature of their value proposition demands it. Otherwise, they may simply create centrally executed applications like SaaS, API, mobile application and more. These communities building centralised applications can setup governance system that is strong enough to provide some of the qualities of decentralized applications (immutability, openness, transparent and autonomy) through enforcement of an open and transparent constitution.
+
+The ability to build applications that can leverage the best of decentralisation and centralisation will help collaborators build useful applications that can easily gain adoption and deliver great value and experience to users.
+
 ## 3. The Ideal Platform for Open Source Service
 
-In section 2, we discussed the reasons why centralised code sharing platforms are unsuitable to lead the change towards a future of community-led software products and businesses. These changes range from censorship, ownership and governance to execution models. We can see that the major obstacle is the inability to enforce ownership, transparency and accountability.
+In section 2, we discussed the reasons why centralised code sharing platforms are unsuitable to lead the change towards a future of community-led software products and businesses. These changes range from censorship, ownership, and governance to execution models. We can see that the major obstacle is the inability to enforce ownership, transparency and accountability.
 
 We take the following approaches to solve the issues:
 
 - Ellcrys will use blockchain technology to eliminate censorship concerns by creating a new type of decentralised collaboration framework that is open to anyone, anywhere and cannot be destroyed. There will be no entity to receive and carry out censorship requests.
-- The use of public key cryptography as the primary mechanism to derive identity and to authorise actions, will allow projects to have multiple owners or signatories who can partake in the day-to-day governance of the project.
 
-- By the very nature of blockchains, repositories will remain immutable and always accessible to everyone. Although, owners of the repositories may enable the ability to apply access level rules to prevent unauthorised write operations.
+- The use of public key cryptography as the primary mechanism to create identity and to authorise actions, will allow projects to have multiple owners or signatories who can partake in the day-to-day governance of the project.
 
-- The introduction of autonomous procedures (a.k.a smart contracts) will allow communities to create immutable applications to enforce ownership, governance, incentive structure and disbursement and business rules. Many nodes on a blockchain network execute autonomous procedures in such a way that ensures correctness and resilience to attacks that would normally cripple a centralised equivalent.
+- By the very nature of blockchains, repositories will remain immutable: They will always be accessible to everyone. Although, owners of the repositories may enable the ability to apply access level rules to prevent unauthorised write operations.
+
+- The introduction of autonomous procedures (a.k.a smart contracts) will allow communities to create immutable applications to enforce ownership, governance, incentive structure and disbursement and business rules. Many nodes on a blockchain network execute autonomous procedures in a way that ensures correctness and resilience to attacks that would normally cripple a centralised equivalent.
 
 - The use of Git makes it easy for millions of developers who are already familiar with the tool to easily create repositories, contribute, import their existing projects and integrate with other git compatible tools and services they already use.
 
-- With a clear ownership and governance structure, external service providers can deliver value based on the governance history (e.g. proposals) of a project. For instance, a community may create and vote for a well-detailed proposal to run ads on Google Adwords, upon the approval, a designated service creates a campaign on Google Adwords using the information provided in the proposal.
+- The combination of public key cryptography and the ability to create complex governance structures, external service providers can deliver value based on the governance history or events (e.g. proposals) of a project. For instance, a community may create and vote for a proposal to run ads on Google Adwords, upon the approval, a designated service creates a campaign on Google Adwords using the information provided in the proposal.
 
 ## 4. Bitcoin
 
@@ -192,11 +196,11 @@ Bitcoin is a form of electronic cash. It is a decentralised digital currency tha
 ### 4.2. Consensus Mechanism
 
 Blockchain networks require a means to reach an agreement on a single value. Consensus algorithms define the rules that must be followed by computers on the network in other to reach an agreement. The process of agreeing with other computers is known as the consensus problem, and it is a well-researched field in computer science.
-Bitcoin uses a consensus algorithm known as Proof of Work [9]. It is used to process blocks of transactions and append them to a chain of blocks — the blockchain. In Bitcoin, the process of appending a block to the blockchain is known as “mining”, and the individuals who take part in the mining process are known as “miners”. PoW requires miners to solve complex cryptographic puzzles to gain the right to add a block.
+Bitcoin uses a consensus algorithm known as Proof of Work[9](PoW). It is used to process blocks of transactions and append them to a chain of blocks — the blockchain. In Bitcoin, the process of appending a block to the blockchain is known as “mining”, and the individuals who take part in the mining process are known as “miners”. PoW requires miners to solve complex cryptographic puzzles to gain the right to add a block.
 
 Miners receive newly created Bitcoin as a reward for solving the puzzle. This reward is known as the block reward. Before the reward is issued, the generated block must follow the consensus rules. All other nodes on the network are responsible for verifying the block and enforcing the consensus rules. Once a miner discovers a valid block they did not create, they immediately stop and start mining the next block. There is a network difficulty that ensures that blocks are created within 10 minutes. It determines how hard it is for the miners to mine a block and is adjusted dynamically to maintain the 10 minutes window.
 
-Bitcoin’s PoW has a disadvantage of being very slow. It has been described as a consensus system that wastes energy and is causing harm to the planet. However, it is the most battled tested and well understood trust-less consensus system in the cryptocurrency industry.
+Bitcoin’s PoW has a disadvantage of being very slow. It has been described as a consensus system that wastes energy and is causing harm to the planet. However, it is the most battle- tested and well understood trustless consensus system in the cryptocurrency industry.
 
 ### 4.3. Low Transaction Throughput
 
@@ -217,7 +221,7 @@ BitcoinNG ensures that the system can process transactions even when the network
 
 ## 5. Ellcrys Protocol
 
-In this section, we describe the engineering direction of our protocol. Existing knowledge of blockchain technology is essential. Please note that some concepts described below are not final and may be subject to change.
+In this section, we describe the engineering direction of our protocol. Existing knowledge of blockchain technology is essential. Please note that some concepts described below are not final and may be subject to change as we continue to execute on the journey to deliver our vision.
 
 ### 5.1. Consensus Model
 
@@ -233,13 +237,13 @@ Bitcoin-NG extends Nakamoto consensus into a protocol that is capable of process
 
 In most public blockchain systems with a native cryptocurrency, new coins are generated when a new block is mined. The generated coins are shared to the miner and any other network participants who contributed to the creation or validation of the new block at a predetermined ratio. In Bitcoin and other similar proof-of-work blockchains, the miner of the block receives all newly generated coins.
 
-We believe a system built on a coin generation model where a single participant receives all rewards is unfair and does not promote the equitable distribution of wealth generated by the network. In matured proof-of-work blockchains like Bitcoin, a user must be able to afford specialised equipment to compete with well-funded corporate organisations. The inability for small miners to compete fosters a system that is centralised around a handful of wealthy individuals, pools and mining companies.
+We believe a system built on a coin generation model where a single participant receives all rewards is unfair and does not promote equitable distribution of wealth generated by the network. Centralization of rewards within a wealthy minority further replicates and increases the existing gap between the rich and poor. In matured proof-of-work blockchains like Bitcoin, a user needs specialised equipments to compete with well-funded corporate organisations. Although, one might argue that these networks provide security to the network, but they may also become future adversaries when incentives falling below their cost of operation due to low block rewards.
 
 #### 5.2.1 PeopleMint
 
 #### Introduction
 
-We introduced PeopleMint[12] — A novel coin generation model that allows anyone to participate in the creation of a new coin by exchanging their national banknotes for new coins. PeopleMint gives everyone a chance to participate in coin creation using a material (a currency note) that is both valuable and accessible to all class of people. Banknotes or currency notes are the raw material a miner needs to be able to create new coins and receive rewards for their service to the network. Without it, miners are compensated only through transaction fees.
+We introduced PeopleMint[12] — A novel coin generation model that allows anyone to participate in the creation of a new coin by exchanging their national banknotes for new coins. PeopleMint gives everyone a chance to participate in coin creation using a material (a currency note) that is both valuable and accessible to all classes of people. Banknotes or currency notes are the raw material a miner needs to be able to create new coins and receive rewards for their service to the network. Without it, miners are compensated only through transaction fees.
 
 #### Against Miner Centralization & Unfair Distribution
 
@@ -249,20 +253,20 @@ PeopleMint creates a symbiotic relationship between a global population of users
 
 **Create Banknote Transaction**
 
-Alice takes a short video in which she must capture an image of a banknote with the last 12 bytes of the hash of a recent block written on it. She encodes the video in a transaction and sends it to a Node A. Alice’s transaction must include a field called `banknoteHeader` which includes the serial, denomination, and the country code of the banknote.
+Alice takes a short video in which she must capture an image of a banknote with the last 12 bytes of the hash of a recent block written on the said banknote. She encodes the video in a transaction and sends it to a Node A. Alice’s transaction must include a field called `banknoteHeader` which includes the serial, denomination, and the country code of the banknote.
 
 **Preliminary Validation**
 
-Node A performs preliminary validation to weed out banknotes that have a serial that was previously processed, or notes that have unsupported denomination or currency code. After successful validation, the transaction gets added into the transaction pool. These notes in the pool are not eligible for inclusion in a block until sufficient endorsements from off-chain validators have been collected.
+Node A performs preliminary validation to weed out banknotes that have a serial that was previously processed, or notes that have unsupported denomination of currency code. After successful validation, the transaction gets added into the transaction pool. These notes in the pool are not eligible for inclusion in a block until sufficient endorsements from off-chain validators have been collected.
 
 **Off-chain Validation**
 
-Off-chain validation begins when a banknote passes the preliminary check and gets added to the transaction pool. Validators attempt to analyse the banknote to check the correctness of the information provided by the banknote scanner. The validator constructs a new encrypted endorsement transaction named `bnEndorsement` that contains answers to the following protocol questions:
+Off-chain validation begins when a banknote passes the preliminary check and gets added to the transaction pool. Validators attempt to analyse the banknote to check the correctness of the information provided by the banknote scanner. The validator constructs a new encrypted endorsement transaction named `bnEndorsement` that contain answers to the following protocol questions:
 
 - Does the video include a banknote that looks authentic? [Yes/No required].
 - Provide the block hash written on the banknote in the video? [12-bytes alphanumeric value required]
 - Does the serial specified in the transaction’s banknote header match the serial on the banknote in the video? [Yes/No required].
-- Is the currency code and denomination valid? [Yes/No required].
+- Are the currency code and denomination valid? [Yes/No required].
 
 A validator must construct a banknote endorsement transaction with answers to the above queries and send it to nodes on the network. All nodes collect these endorsements until enough is received from other validators.
 
@@ -303,11 +307,11 @@ We will distribute the supply allocated to the public through a combination of p
 
 **Session 1** (Private Sale)
 
-- Started: 24th of December 2018.
+- Started: 24th of December 2017.
 - Ended: 24th of January 2018.
 - Duration: 1 Month
 - Distributed Supply: 10,346,202 ELL (includes bonuses)
-- Price: 0.05
+- Price: 0.05 USD
 
 **Session 2** (Pre-Sale)
 
@@ -315,7 +319,7 @@ We will distribute the supply allocated to the public through a combination of p
 - Ended: 1st of March 2018.
 - Duration: 1 Month
 - Distributed Supply: 7,378,820 ELL (incl. bonuses and bounties)
-- Price: 0.08
+- Price: 0.08 USD
 
 **Session 3** (Pre-Sale 2)
 
@@ -323,7 +327,7 @@ We will distribute the supply allocated to the public through a combination of p
 - Ended: TBA.
 - Duration: 1 Month
 - Distributed Supply: 20,000,000 ELL
-- Price: 0.5
+- Price: 0.5 USD
 
 **Final Session** (Distribution Network)
 
@@ -332,23 +336,23 @@ We will distribute the supply allocated to the public through a combination of p
 - Distributed Supply: 862,274,978 ELL
 - Price: Free (optional sale of multipliers)
 
-#### 5.2.5 Distribution Network
+#### Distribution Network
 
 **Introduction**
 
 As a hybrid consensus system composed of both proof-of-work and proof-of-stake, there is a need to ensure the fair and widespread distribution of the initial coin supply to as many people as possible. When a few individuals own enough coins to launch an attack, the security of the system is weakened.
 
-The vast majority of ICOs have distributed their initial or total coin supply within a month, leading to a situation where large amounts of coins end up in the control of a few individuals or entities. More so, short-lived ICOs prevent a sufficient amount of people from getting to learn about the project and understanding enough to acquire a stake in the system. For a blockchain network to be sufficiently decentralised, it’s coin supply must also be well distributed.
+The vast majority of ICOs have distributed their initial or total coin supply within a month, leading to a situation where large amounts of coins end up in the control of a few individuals or entities. More so, short-lived ICOs prevent a sufficient amount of people from getting to learn about the project and understanding enough to acquire a stake in the system. Ideally, for a blockchain network to be sufficiently decentralised, its coin supply must also be well distributed.
 
 **The Network**
 
 To ensure broad and fair distribution of the native coin, we are going to run a temporary network known as the “Distribution Network”. The network is going to serve a singular purpose of allowing anyone in the world to exchange banknotes for the native coin through the PeopleMint mechanism. Once the public allocation is distributed, a snapshot of the blockchain state is collected and used to seed the genesis block of the main network.
 
-The network is to run the full consensus specification which allows anyone to participate (as a miner, endorse, validator and scanner) and earn regular network rewards. We can test the protocol, plan upgrades and onboard more network participants into our community in preparation for our main network launch.
+The network is to run the full consensus specification which allows anyone to participate (as a miner, endorser, validator and scanner) and earn regular network rewards. We can test the protocol, plan upgrades and onboard more network participants into our community in preparation for our main network launch.
 
 **Multipliers**
 
-Before the distribution network commences, the Ellcrys team would not have sufficient funding to continue to support the project and build a thriving ecosystem. To generate funds, we are going to sell unique signature tokens known as multipliers that are capable of increasing the allocation generated from scanning a banknote. For instance, if a \$100 note produce 2.4 ELL, a 5x multiplier increases the output to 12 ELL. Multipliers are not required to participate in the network — Anyone can still create/earn coins by freely scanning currency notes or participating in other departments of the network.
+Before the distribution network commences, the Ellcrys team would not have sufficient funding to continue to support the project and build a thriving ecosystem. To generate funds, we are going to sell unique signature tokens known as multipliers that are capable of increasing the allocation generated from scanning a banknote. For instance, if a \$100 note produces 2.4 ELL, a 5x multiplier increases the output to 12 ELL. Multipliers are not required to participate in the network — Anyone can still create/earn coins by freely scanning currency notes or participating in other departments of the network.
 
 ### 5.3. Network Participants
 
@@ -362,7 +366,7 @@ Miners are individuals who participate in Proof-of-Work attempting to create blo
 
 Witnesses are stakeholders who validate key blocks, microblocks and extend microblocks with additional transactions. Witnesses serve as validators that audit the work of miners. They enable power dynamics with PoW miners where they continuously ensure these miners abide by the rules.
 
-When a block is received, every witness online checks whether the block’s header is valid; It checks if the header contains a previous block’s hash, if the difficulty matches the expected current difficulty and whether the block remuneration is valid. Once validated, the witness checks whether it was one of /N/ witnesses selected to verify this block. It does this by running a pseudo-random operation to determine the N witnesses, and when it finds that it was selected, the witness signs the hash of the block and broadcast the signature to the network.
+When a block is received, every witness online checks whether the block’s header is valid; It checks if the header contains a previous block’s hash, if the difficulty matches the expected current difficulty and whether the block remuneration is valid. Once validated, the witness checks whether it was one of the /N/ witnesses selected to verify this block. It does this by running a pseudo-random operation to determine the N witnesses, and when it finds that it was selected, the witness signs the hash of the block and broadcast the signature to the network.
 
 When the /Nth/ witness see that it was derived by the block, it creates a wrapped block that extends it. If the block is a microblock, it includes as many transactions as the remaining block capacity can support, the signatures of the other selected witnesses and its signature of this wrapped block. The Nth witness broadcasts the wrapped block to the network, and when other nodes see that it is valid, they append it to their main chain.
 
@@ -370,7 +374,7 @@ When the /Nth/ witness see that it was derived by the block, it creates a wrappe
 
 One of our core mission is to make it convenient for collaborators to create blockchain applications written in standard, general-purpose programming languages. Current blockchains that provide an application execution environment require these programs to be written in domain-specific languages. The requirement to use domain-specific language limits widespread adoption and may lead to buggy or insecure applications.
 
-A major reason for DSLs is that blockchain applications written in general-purpose languages can produce non-deterministic code that can lead to the creation of forks; This can be exploited by bad actors to prevent the network from reaching consensus on the validity of a block, thereby halting the system. Many programming languages include standard features that produce non-deterministic behaviour (e.g. Go map keys are randomised).
+A major reason for DSLs (Domain Specific Languages) is that blockchain applications written in general-purpose languages can produce non-deterministic code that can lead to the creation of forks; This can be exploited by bad actors to prevent the network from reaching consensus on the validity of a block, thereby halting the system. Many programming languages include standard features that produce non-deterministic behaviour (e.g. Go map keys are randomised).
 
 Hyperledger Fabric[13], which is the first blockchain system to support the use of multiple, well-established languages solved this problem of non-determinism by separating transaction execution, ordering and validation using a novel approach known as /execute-order-validate/ architecture. In this model, a client sends a transaction to peers specified in an endorsement policy. Each transaction is then individually executed by the peers and its output recorded. This process is called /endorsement/. The client must collect /N/ endorsements up to the amount specified in the endorsement policy. After collecting enough endorsement, it creates a transaction and broadcasts it to the ordering service for inclusion into a block, after which the ordering service broadcast the block to the rest of the network to perform the validation phase. During validation, transactions that failed to pass the endorsement policy or have non-deterministic outputs are ignored.
 
@@ -380,7 +384,7 @@ Our execution model is based on similar pre-consensus transaction execution and 
 
 Banknote scanners are individuals who provide short videos of banknotes required to create new coins. As described in Section 5.2.1, PeopleMint allows anyone to exchange banknotes for the native currency. Scanners annotate the hash of a recent block, take a short video that captures the banknote and sends this video to the network for analysis and validation.
 
-Scanners are required to annotate their banknotes to fulfil a chain observer role. The more observers a chain has the greater its chances of becoming or retaining the best chain position. To increase the security of the network, we take into account the number and value of banknotes a chain has received as a criterion in a fork choice situation.
+Scanners are required to annotate their banknotes to fulfill a chain observer role. The more observers a chain has the greater its chances of becoming or retaining the best chain position. To increase the security of the network, we take into account the number and value of banknotes a chain has received as a criterion in a fork choice situation.
 
 ### 5.3.5. Banknote Validators (“Bettors”)
 
@@ -414,7 +418,7 @@ In this section, we discuss issues and approaches relating to how we plan to imp
 
 #### 5.5.1 Design Goals
 
-1. **No Server Requirement:** One of the challenges with the git technology is the hosting and maintenance of a server to enable easy transport of contributions between collaborators who may not be within the same network, geography, and timezone. To do this effectively, users need to have some technical experience managing and configuring servers and networks. Additionally, users who are behind firewalls or do not have a public internet address may be unable to host, serve or access repositories. Contributors can choose to collaborate on a single git server administered by an authority which will leave them vulnerable to censorship actions and single point of failure attacks against the authority. Flexibility, availability and convenience are also affected as collaborators will need to be online and on their desk to sync up with others. An ideal system for enabling collaboration between globally distributed collaborators and organizations should not require collaborators to host their owner servers or depend on trusted entities. It should not degrade the convenience offered by centralized code sharing platforms.
+1. **No Server Requirement:** One of the challenges with the git technology is the hosting and maintenance of a server to enable easy transport of contributions between collaborators who may not be within the same network, geography, and timezone. To do this effectively, users need to have some technical experience managing and configuring servers and networks. Additionally, users who are behind firewalls or do not have a public internet address may be unable to host, serve or access repositories. Contributors can choose to collaborate on a single git server administered by an authority which will leave them vulnerable to censorship actions and single point of failure attacks against the authority. Flexibility, availability, and convenience are also affected as collaborators will need to be online and on their desk to sync up with others. An ideal system for enabling collaboration between globally distributed collaborators and organizations should not require collaborators to host their own servers or depend on trusted entities. It should not degrade the convenience offered by centralized code sharing platforms.
 
 2. **Cheap Service:**
    Centralized code sharing and hosting platforms today allow users to create repositories and contribute to them for free. The ability to offer free services to users is an advantage centralized hosting platforms have over a decentralized counterpart. They are well-funded, profit-driven entities that operate a business-model optimized to encourage free usage until a user reaches a limitation that forces them to begin to pay monthly rent. A decentralized alternative does not have the luxury of investors’ fund paid to all network infrastructure providers as subsidy. Every network participant needs to individually cover their cost of operation from network rewards (e.g. inflation and transaction fees). If usage is made free, the network will be exposed to spamming attacks that can quickly cripple the network, low security and infrastructure failures due to inadequate incentivization. In the end, it is imperative that the network finds a balance between adequately incentivizing network participants and making sure that collaborators access the functionalities of the network cheaply.
@@ -433,8 +437,8 @@ In this section, we discuss issues and approaches relating to how we plan to imp
    Any public node on the network must have the capability to act as git server allowing collaborators to fetch and pull git objects to/from repositories without needing to run their own servers. Users only need to use the `git remote` command to point the git client to the remote peer. The nodes on the network are able to bundle, unbundle, verify and perform other operations using git hooks [14]. If collaborator intends to run their personal servers, they can do so by starting the network client, sync up with the network and interact directly with their node.
 
 3. **Storage:**
-   Decentralized storage protocols (e.g. Filecoin) have to enforce on-demand storage providers to comply with protocol rules that have mandated them to store all allocated objects for the duration covered by the fee received. We have opted to make storage voluntary and instead rely on a delegate-based system where a category of network participants provide storage to the rest of the network for a share of the annual coin inflation; This category of participants are known as “Archivers”.  
-    An archiver’s sole purpose is to store and maintain all data objects generated from the operations of the network. With the archivers active, miners, endorsers and validators may not need to store the entire state and objects of the network but may do so for latency and computational optimizations.  
+   Decentralized storage protocols (e.g. Filecoin and Storj) have to enforce on-demand storage providers to comply with protocol rules that have mandated them to store all allocated objects for the duration covered by the fee received. We have opted to make storage voluntary and instead rely on a delegate-based system where a category of network participants provide storage to the rest of the network for a share of the annual coin inflation; This category of participants are known as “Archivers”.  
+    An archiver’s sole purpose is to store and maintain all data objects generated from the operations of the network. With the archivers active, miners, endorsers, and validators may not need to store the entire state and objects of the network but may do so for latency and computational optimizations.  
     Our storage layer will sit on top of IPFS where any node on the network can query or download any given piece of data at any time.
 
 4. **Cost:**
@@ -446,8 +450,8 @@ On Ellcrys, there will be two types of repositories; **Staked\_ and \_Unstaked**
 **Staked Repository:**
 A staked repository is created when a user deposits a stake to rent a fixed amount of storage space for a repository of their choice. Staked repositories are free to access; A user interacting with a staked repository will not need to pay any fees. There is a risk of staked repositories getting spammed such that their capacity is quickly exhausted. Maintainers of these repositories can choose to enable a **Push Fee** configuration that will require a contributor to pay a fee for every push request. The fee is returned after the branch is merged into a primary branch. Push fees prevent spammers from misusing repository resources and spamming the network. Anyone can add more stake to the repository to increase its allocated resources.
 
-**Unstaked Repository:**
-An unstaked repositories are the opposite of staked repos. They require all operations to include a fee, which means operations target at them are not free and are priced proportionally to the size of the transaction (transaction data + git objects).
+**Un-staked Repository:**
+Un-staked repositories are the opposite of staked repos. They require all operations to include a fee, which means operations target at them are not free and are priced proportionally to the size of the transaction (transaction data + git objects).
 
 ### 5.6. Storage
 
@@ -533,13 +537,13 @@ A department is a division of a repository created to deal with a specific activ
 
 #### 5.8.6. Reputation
 
-Reputation is a non-transferrable asset that is used to gauge someone's capacity to do something, to signal proficiency and belief in a particular characteristic exhibited by a member. They are like crypto assets that can only be transferred through engagement with specific events. For example, when a member concludes a task, she can be rewarded with reputation depending on how satisfied the repository maintainers are with the work delivered. Every repository is bootstrapped with a fixed about of reputation that is transferred to initial founding members who are expected to award them to future members. In real-life, reputation can be gained and lost. Likewise, on Ellcrys, reputation can be lost in disputes or through a reputation decay.
+Reputation is a non-transferrable asset that is used to gauge someone's capacity to do something, to signal proficiency and belief in a particular characteristic exhibited by a member. They are like crypto assets that can only be transferred through engagement with specific events. For example, when a member concludes a task, she can be rewarded with reputation depending on how satisfied the repository maintainers are with the work delivered. Every repository is bootstrapped with a fixed amount of reputation that is transferred to initial founding members who are expected to award them to future members. In real-life, reputation can be gained and lost. Likewise, on Ellcrys, reputation can be lost in disputes or through a reputation decay.
 
 In a dispute, the disputant will have their reputation slashed when they lose the dispute. Reputation decay is a mechanism that penalizes reputation holders who hoard it. When a member does not award reputation within a fixed time, a percentage of their reputation is destroyed.
 
 #### 5.8.7. Skill
 
-A skill describes a collaborator’s ability to do something well. It indicates expertise. Skills have numeric measures which are affected by reputation gains or losses. When someone wishes to award reputation to another person, they must associate it with to a specific skill they believe the recipient deserves a reputation for. Community members use skills to determine contributors proficiency in a specific field when they allocate tasks. Although, skills originate and are acquired from communities that a contributor engages with but they become attributes of an Ellcrys account that can be used as proof of proficiency within the network.
+A skill describes a collaborator’s ability to do something well. It indicates expertise. Skills have numeric measures which are affected by reputation gains or losses. When someone wishes to award reputation to another person, they must associate it to a specific skill they believe the recipient deserves a reputation for. Community members use skills to determine contributors proficiency in a specific field when they allocate tasks. Although, skills originate and are acquired from communities that a contributor engages with but they become attributes of an Ellcrys account that can be used as proof of proficiency within the network.
 
 #### 5.8.8. Task
 
@@ -547,7 +551,7 @@ Tasks are the unit of work in a repository. When a repository requires some work
 
 #### 5.8.9. Proposals & Voting
 
-Most organizations today provide a mechanism by which stakeholders can formally present proposals, deliberate and vote for or against them. On Ellcrys, proposals allow members repository to raise issues, present an improvement or execute a custom action encoded in an autonomous function. Proposals solicit for votes; It may require simple or super majority to be considered accepted.
+Most organizations today provide a mechanism by which stakeholders can formally present proposals, deliberate and vote for or against them. On Ellcrys, proposals allow members repository to raise issues, present an improvement or execute a custom action encoded in an autonomous function. Proposals solicit for votes; It may require simple or super majority to be considered accepted. The weight of a vote can be determined by how much coins, stake or reputation is held by voters. Collaborators can create custom weighting algorithms using autonomous functions.
 
 #### 5.8.10. Dispute Resolution
 
