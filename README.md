@@ -321,13 +321,13 @@ We will distribute the supply allocated to the public through a combination of p
 - Distributed Supply: 7,378,820 ELL (incl. bonuses and bounties)
 - Price: 0.08 USD
 
-**Session 3** (Pre-Sale 2)
+**Session 3** (Pre-Dist.Net Sale)
 
 - Started: TBA
 - Ended: TBA.
 - Duration: 1 Month
 - Distributed Supply: 20,000,000 ELL
-- Price: 0.5 USD
+- Price: TBA
 
 **Final Session** (Distribution Network)
 
