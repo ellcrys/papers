@@ -623,5 +623,5 @@ Ellcrys is determined to create a system that allows networked organizations to 
 13. Hyperledger Fabric: A Distributed Operating System for
     Permissioned Blockchains - https://arxiv.org/pdf/1801.10228.pdf
 14. Git Hooks - https://git-scm.com/docs/githooks
-15. Aragon Whitepaper - https://github.com/aragon/whitepaper
+15. Aragon Whitepaper - https://forum.aragon.org/t/aragon-court-v1/691
 16. On Consensus and Humming in the IETF - https://tools.ietf.org/html/rfc7282
