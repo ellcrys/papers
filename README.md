@@ -610,12 +610,12 @@ Ellcrys is determined to create a system that allows networked organizations to 
 1. Bitcoin - https://bitcoin.org/bitcoin.pdf
 2. Git - https://en.wikipedia.org/wiki/Git
 3. Github - https://github.com
-4. Bernstein vs. United States - https://en.wikipedia.org/wiki/Bernstein**v._United**States
+4. Bernstein vs. United States - https://en.wikipedia.org/wiki/Bernstein_v._United_States
 5. Snuffle - https://cr.yp.to/snuffle.html
-6. Censorship of Github - https://en.wikipedia.org/wiki/Censorship**of**GitHub
+6. Censorship of Github - https://en.wikipedia.org/wiki/Censorship_of_GitHub
 7. Blockchain - https://en.wikipedia.org/wiki/Blockchain
 8. Satoshi Nakamoto - https://en.wikipedia.org/wiki/Satoshi_Nakamoto
-9. Proof of Work - https://en.bitcoin.it/wiki/Proof**of**work
+9. Proof of Work - https://en.bitcoin.it/wiki/Proof_of_work
 10. Bitcoin-NG: A Scalable Blockchain Protocol - https://arxiv.org/abs/1510.02037
 11. Proof of Activity: Extending Bitcoin’s Proof of Work via Proof of Stake - https://eprint.iacr.org/2014/452.pdf
 12. PeopleMint: A Multi-Party Mining
