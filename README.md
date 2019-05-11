@@ -334,7 +334,7 @@ We will distribute the supply allocated to the public through a combination of p
 - Started: TBA.
 - Ended: TBA.
 - Distributed Supply: 862,274,978 ELL
-- Price: Determined by peopleMint exchange algorithm 
+- Price: Determined by PeopleMint exchange algorithm 
 
 #### Distribution Network
 
