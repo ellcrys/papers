@@ -307,33 +307,38 @@ We will distribute the supply allocated to the public through a combination of p
 
 **Session 1** (Private Sale)
 
-- Started: 24th of December 2017.
-- Ended: 24th of January 2018.
+- Start Date: 24th of December 2017.
+- End Date: 24th of January 2018.
 - Duration: 1 Month
-- Distributed Supply: 10,346,202 ELL (includes bonuses)
+- Distributed Supply: 10,346,102 ELL (includes bonuses)
 - Price: 0.05 USD
 
 **Session 2** (Pre-Sale)
 
-- Started: 1st of February 2018.
-- Ended: 1st of March 2018.
+- Start Date: 1st of February 2018.
+- End Date: 1st of March 2018.
 - Duration: 1 Month
 - Distributed Supply: 7,378,820 ELL (incl. bonuses and bounties)
 - Price: 0.08 USD
 
-**Session 3** (Pre-Dist.Net Sale)
+**Session 3** (Pre-IEO)
 
-- Started: TBA
-- Ended: TBA.
+- Start Date: TBA
 - Duration: 1 Month
-- Distributed Supply: 20,000,000 ELL
+- Distributed Supply: 18,700,000 ELL
+- Price: TBA
+
+**Session 4** (Pre-IEO)
+
+- Start Date: TBA
+- Duration: 1 Month
+- Distributed Supply: 70,000,000 ELL
 - Price: TBA
 
 **Final Session** (Distribution Network)
 
-- Started: TBA.
-- Ended: TBA.
-- Distributed Supply: 862,274,978 ELL
+- Start Date: TBA.
+- Distributed Supply: 793,575,078 ELL
 - Price: Determined by PeopleMint exchange algorithm 
 
 #### Distribution Network
