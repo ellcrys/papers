@@ -326,9 +326,9 @@ We will distribute the supply allocated to the public through a combination of p
 - Start Date: TBA
 - Duration: 1 Month
 - Distributed Supply: 18,700,000 ELL
-- Price: TBA
+- Price: 0.08 USD
 
-**Session 4** (Pre-IEO)
+**Session 4** (IEO)
 
 - Start Date: TBA
 - Duration: 1 Month
@@ -339,7 +339,7 @@ We will distribute the supply allocated to the public through a combination of p
 
 - Start Date: TBA.
 - Distributed Supply: 793,575,078 ELL
-- Price: Determined by PeopleMint exchange algorithm 
+- Price: Banknote * network exchange rate
 
 #### Distribution Network
 
